@@ -1,5 +1,18 @@
 <template>
-  <div class="home"></div>
+  <div>
+    <NavigationBar />
+  </div>
 </template>
 
-<script></script>
+<script>
+import NavigationBar from '@/components/NavigationBar';
+
+export default {
+  components: { NavigationBar },
+  setup() {
+    return {};
+  },
+};
+</script>
+
+<style lang="scss" scoped></style>
