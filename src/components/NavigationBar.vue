@@ -6,7 +6,7 @@
       </a>
 
       <!-- mobile menu -->
-      <a href="#" class="hamburger__menu hide-for-desktop">
+      <a class="hamburger__menu hide-for-desktop" @click="toggleMenu" :class="{ open: hasOpen }">
         <span></span>
         <span></span>
         <span></span>
@@ -28,22 +28,46 @@
 
 <script>
 export default {
-  setup() {
-    return {};
+  data() {
+    return {
+      hasOpen: false,
+    };
+  },
+  methods: {
+    toggleMenu() {
+      this.hasOpen = !this.hasOpen;
+    },
   },
 };
 </script>
 
 <style lang="scss" scoped>
 .header {
-  padding: 24px;
+  margin: 1.25rem 3.125rem;
+  padding: 1.5625rem;
+  position: relative;
+
+  @include breakpoint-down(medium) {
+    margin: 0;
+  }
 
   &__links {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    position: absolute;
+    left: 11rem;
 
     > a {
       color: $grayish-violet;
+      transition: color 300ms ease-in-out;
+
+      &:not(:last-child) {
+        margin-right: 1.75rem;
+      }
+
+      &:hover {
+        color: $very-dark-blue;
+      }
     }
   }
 
@@ -55,14 +79,28 @@ export default {
 
     > a {
       color: $grayish-violet;
+      transition: color 300ms ease-in-out;
+      transition: opacity 300ms ease-in-out;
 
       // signup button
       &:last-of-type {
         color: white;
-        padding: 8px 20px;
+        padding: 0.625rem 1.375rem;
         background-color: $cyan;
-        border-radius: 25px;
+        border-radius: 1.5625rem;
         color: white;
+
+        &:hover {
+          opacity: 0.75;
+        }
+      }
+
+      &:not(:last-child) {
+        margin-right: 1.75rem;
+
+        &:hover {
+          color: $very-dark-blue;
+        }
       }
     }
   }
@@ -74,14 +112,31 @@ img {
 }
 
 .hamburger__menu {
+  cursor: pointer;
   > span {
     display: block;
-    width: 26px;
-    height: 3px;
+    width: 1.625rem;
+    height: 0.125rem;
     background-color: $grayish-violet;
+
+    transition: all 300ms ease-in-out;
+    transform-origin: 3px 1px;
 
     &:not(:last-child) {
       margin-bottom: 0.3125rem;
+    }
+  }
+  &.open {
+    > span:first-child {
+      transform: rotate(45deg);
+    }
+
+    > span:nth-child(2) {
+      opacity: 0;
+    }
+
+    > span:last-child {
+      transform: rotate(-45deg);
     }
   }
 }
