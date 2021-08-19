@@ -1,4 +1,5 @@
 # shortly
+<<<<<<< HEAD
 
 ## Project setup
 ```
@@ -22,3 +23,6 @@ yarn lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+=======
+this is a url shortening website based on the challenge by frontendmentor.io
+>>>>>>> 54aefbcb19f47f6307cd5f7d0132c1ace6725204
