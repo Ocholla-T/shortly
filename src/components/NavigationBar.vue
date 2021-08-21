@@ -6,7 +6,7 @@
       </a>
 
       <!-- mobile menu -->
-      <a class="hamburger__menu hide-for-desktop" @click="toggleMenu" :class="{ open: hasOpen }">
+      <a class="hamburger__menu hide-for-desktop" @click="toggleMenu" :class="{ open: isOpen }">
         <span></span>
         <span></span>
         <span></span>
@@ -23,6 +23,17 @@
         <a href="#" class="sign-up-button">Sign Up</a>
       </div>
     </nav>
+
+    <transition name="header__menu__fade">
+      <div class="header__menu flex flex-ai-c hide-for-desktop" v-if="isOpen">
+        <a href="http://">Features</a>
+        <a href="http://">Pricing</a>
+        <a href="http://">Resources</a>
+        <hr />
+        <a href="http://">Login</a>
+        <a href="http://">Sign Up</a>
+      </div>
+    </transition>
   </header>
 </template>
 
@@ -30,12 +41,12 @@
 export default {
   data() {
     return {
-      hasOpen: false,
+      isOpen: false,
     };
   },
   methods: {
     toggleMenu() {
-      this.hasOpen = !this.hasOpen;
+      this.isOpen = !this.isOpen;
     },
   },
 };
@@ -88,7 +99,6 @@ export default {
         padding: 0.625rem 1.375rem;
         background-color: $cyan;
         border-radius: 1.5625rem;
-        color: white;
 
         &:hover {
           opacity: 0.75;
@@ -102,6 +112,33 @@ export default {
           color: $very-dark-blue;
         }
       }
+    }
+  }
+
+  &__menu {
+    background-color: $dark-violet;
+    border-radius: 10px;
+    padding: 10px 5px;
+    margin: 0 1.5625rem;
+    height: 50vh;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    > a {
+      font-size: 1.0625em;
+      color: white;
+
+      &:last-of-type {
+        color: white;
+        padding: 0.625rem 5.5625rem;
+        background-color: $cyan;
+        border-radius: 1.5625rem;
+      }
+    }
+
+    > hr {
+      width: 85%;
+      border: 1px solid $grayish-violet;
     }
   }
 }
@@ -139,5 +176,13 @@ img {
       transform: rotate(-45deg);
     }
   }
+}
+
+.header__menu__fade-enter-active {
+  animation: fade-in 1s;
+}
+
+.header__menu__fade-leave-active {
+  animation: fade-out 1s;
 }
 </style>
