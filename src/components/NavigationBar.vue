@@ -117,10 +117,14 @@ export default {
 
   &__menu {
     background-color: $dark-violet;
+    position: absolute;
+    left: 0;
+    right: 0;
     border-radius: 10px;
     padding: 10px 5px;
     margin: 0 1.5625rem;
     height: 50vh;
+    width: auto;
     flex-direction: column;
     justify-content: space-evenly;
 
@@ -130,6 +134,8 @@ export default {
 
       &:last-of-type {
         color: white;
+        width: auto;
+        height: auto;
         padding: 0.625rem 5.5625rem;
         background-color: $cyan;
         border-radius: 1.5625rem;
@@ -179,10 +185,10 @@ img {
 }
 
 .header__menu__fade-enter-active {
-  animation: fade-in 1s;
+  animation: fade-in 250ms;
 }
 
 .header__menu__fade-leave-active {
-  animation: fade-out 1s;
+  animation: fade-out 250ms;
 }
 </style>
