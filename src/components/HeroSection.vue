@@ -24,6 +24,8 @@ export default {};
 
 <style lang="scss" scoped>
 .hero {
+  height: fit-content;
+
   &__heading {
     font-weight: 700;
     color: $very-dark-blue;
@@ -43,8 +45,12 @@ export default {};
     }
 
     &__illustration {
-      width: 140%;
-      height: auto;
+      width: 125%;
+      height: 50%;
+    }
+
+    &__text {
+      margin: 0 1rem;
     }
 
     &__heading {
@@ -55,7 +61,7 @@ export default {};
 
     &__paragraph {
       margin-top: 0.75rem;
-      margin-bottom: 1.25rem;
+      margin-bottom: 2rem;
     }
 
     &__button {
