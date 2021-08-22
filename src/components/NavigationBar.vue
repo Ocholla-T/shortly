@@ -55,7 +55,7 @@ export default {
 <style lang="scss" scoped>
 .header {
   margin: 1.25rem 3.125rem;
-  padding: 1.5625rem;
+  padding: 1rem;
   position: relative;
 
   @include breakpoint-down(medium) {
@@ -122,7 +122,7 @@ export default {
     right: 0;
     border-radius: 10px;
     padding: 10px 5px;
-    margin: 0 1.5625rem;
+    margin: 0 1rem;
     height: 50vh;
     width: auto;
     flex-direction: column;
