@@ -54,7 +54,7 @@ export default {
 
 <style lang="scss" scoped>
 .header {
-  margin: 1.25rem 3.125rem;
+  margin: 1.25rem 7.125rem;
   padding: 1rem;
   position: relative;
 
