@@ -6,6 +6,11 @@
         src="../assets/images/bg-shorten-mobile.svg"
         alt="background image"
       />
+      <img
+        class="hide-for-mobile"
+        src="../assets/images/bg-shorten-desktop.svg"
+        alt="background image"
+      />
       <div class="call__to__action__form flex flex-jc-c">
         <input type="text" name="shorten" placeholder="Shorten a link here..." />
         <input type="button" value="Shorten It!" />
@@ -20,18 +25,34 @@ export default {};
 
 <style lang="scss" scoped>
 .container {
-  @include breakpoint-down(medium) {
-    margin: 3.5rem 1rem;
-  }
+  margin: 3.5rem 1rem;
 }
 .call__to__action {
+  background-color: $dark-violet;
+  border-radius: 0.625rem;
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+
+  &__form {
+    z-index: 1;
+
+    > input {
+      padding: 0.5rem 0;
+      border-radius: 0.3125rem;
+      border: 0px;
+
+      &:last-of-type {
+        background-color: $cyan;
+        cursor: pointer;
+        color: white;
+      }
+    }
+  }
+
   @include breakpoint-down(medium) {
     width: 100%;
     height: 8.75rem;
-    position: relative;
-    overflow: hidden;
-    background-color: $dark-violet;
-    border-radius: 0.625rem;
 
     > img {
       position: absolute;
@@ -45,21 +66,16 @@ export default {};
 
     &__form {
       position: relative;
-      z-index: 1;
       width: 85%;
-      height: 85%;
-
       flex-direction: column;
       box-sizing: border-box;
 
       > input {
         width: 100%;
-        padding: 0.5rem 0;
-        border-radius: 0.3125rem;
-        border: 0px;
+        height: 85%;
         font-size: 0.875rem;
 
-        &:not(:last-of-type) {
+        &:first-of-type {
           margin-bottom: 0.875rem;
           padding-left: 1rem;
 
@@ -67,11 +83,38 @@ export default {};
             color: $grayish-violet;
           }
         }
+      }
+    }
+  }
+
+  @include breakpoint-up(large) {
+    flex-direction: column;
+    margin: 0 8.125rem;
+    height: 9rem;
+    border-radius: 0.625rem;
+
+    > img {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      z-index: 0;
+    }
+
+    &__form {
+      height: 35%;
+      width: 90%;
+      > input {
+        font-size: 1.125rem;
+
+        &:first-of-type {
+          flex-grow: 4;
+          margin-right: 1rem;
+          padding-left: 1rem;
+        }
 
         &:last-of-type {
+          flex-grow: 1;
           background-color: $cyan;
-          color: white;
-          cursor: pointer;
         }
       }
     }
