@@ -77,7 +77,7 @@ export default {};
   }
   @include breakpoint-up(large) {
     display: grid;
-    padding-left: 4.6875rem;
+    padding-left: 8.6875rem;
     grid-template-columns: repeat(2, 1fr);
     overflow: hidden;
     justify-items: start;
@@ -85,7 +85,6 @@ export default {};
     &__image {
       grid-column: 2;
       grid-row: 1;
-      padding-left: 3rem;
       overflow: hidden;
       width: 100%;
     }
