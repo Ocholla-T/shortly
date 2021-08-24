@@ -1,31 +1,74 @@
 <template>
-  <div class="container">
-    <div class="call__to__action flex flex-ai-c flex-jc-c">
-      <img
-        class="hide-for-desktop"
-        src="../assets/images/bg-shorten-mobile.svg"
-        alt="background image"
-      />
-      <img
-        class="hide-for-mobile"
-        src="../assets/images/bg-shorten-desktop.svg"
-        alt="background image"
-      />
-      <div class="call__to__action__form flex flex-jc-c">
-        <input type="text" name="shorten" placeholder="Shorten a link here..." />
-        <input type="button" value="Shorten It!" />
+  <section>
+    <div class="container">
+      <div class="call__to__action flex flex-ai-c flex-jc-c">
+        <img
+          class="hide-for-desktop"
+          src="../assets/images/bg-shorten-mobile.svg"
+          alt="background image"
+        />
+        <img
+          class="hide-for-mobile"
+          src="../assets/images/bg-shorten-desktop.svg"
+          alt="background image"
+        />
+        <form class="call__to__action__form flex flex-jc-c" @submit.prevent="shortenUrl">
+          <input
+            type="text"
+            name="url"
+            placeholder="Shorten a link here..."
+            :value="url"
+            @input="updateUrl"
+          />
+          <input type="submit" value="Shorten It!" />
+        </form>
+      </div>
+      <div v-if="hasLink">
+        <ShortenedLinkCard v-for="(url, index) in allUrls" :key="index">
+          <template v-slot:original-link> {{ url.originalLink }}</template>
+          <template v-slot:shortened-link>{{ url.shortenedLink }} </template>
+        </ShortenedLinkCard>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
-export default {};
+import ShortenedLinkCard from '@/components/slot/ShortenedLinkCard';
+import { mapState, mapGetters, mapActions } from 'vuex';
+
+export default {
+  components: {
+    ShortenedLinkCard,
+  },
+  data() {
+    return {};
+  },
+  computed: {
+    ...mapState({
+      url: (state) => {
+        state.urlModel;
+      },
+    }),
+    ...mapGetters(['allUrls', 'hasLink']),
+  },
+  methods: {
+    ...mapActions(['shortenUrl']),
+    updateUrl(e) {
+      this.$store.commit('updateUrl', e.target.value);
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>
+section {
+  background-color: #f0f1f6;
+  box-sizing: border-box;
+  overflow: hidden;
+}
 .container {
-  margin: 3.5rem 1rem;
+  margin: 2.5rem 1rem;
 }
 .call__to__action {
   background-color: $dark-violet;
@@ -73,7 +116,6 @@ export default {};
       > input {
         width: 100%;
         height: 85%;
-        font-size: 0.875rem;
 
         &:first-of-type {
           margin-bottom: 0.875rem;
