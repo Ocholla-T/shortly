@@ -6,4 +6,7 @@ module.exports = {
       },
     },
   },
+  devServer: {
+    proxy: 'https://api.shrtco.de/v2/',
+  },
 };
