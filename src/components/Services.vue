@@ -15,11 +15,11 @@ export default {};
 
 <style lang="scss" scoped>
 .services {
-  margin: 0 1rem;
+  background-color: #f0f1f6;
   &__introduction {
     flex-direction: column;
     text-align: center;
-    margin-bottom: 3rem;
+    margin: 0 1rem 3rem 1rem;
     > h2 {
       color: $very-dark-violet;
       font-size: 1.625rem;

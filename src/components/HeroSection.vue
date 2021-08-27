@@ -24,7 +24,7 @@ export default {};
 
 <style lang="scss" scoped>
 .hero {
-  height: fit-content;
+  min-height: 90vh;
 
   &__heading {
     font-weight: 700;
@@ -38,9 +38,9 @@ export default {};
   @include breakpoint-down(medium) {
     margin-left: 1rem;
     text-align: center;
-    height: 100%;
 
     &__image {
+      margin-top: 1rem;
       overflow: hidden;
     }
 
@@ -50,17 +50,17 @@ export default {};
     }
 
     &__text {
-      margin: 0 1rem;
+      margin: 1rem;
     }
 
     &__heading {
-      margin-top: 0.75rem;
-      font-size: 2.125rem;
+      margin-top: 1.5rem;
+      font-size: 2.25rem;
       line-height: 1.1;
     }
 
     &__paragraph {
-      margin-top: 0.75rem;
+      margin-top: 1rem;
       margin-bottom: 2rem;
     }
 
