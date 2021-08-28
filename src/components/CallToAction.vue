@@ -113,6 +113,7 @@ section {
 }
 
 .spinner {
+  flex-grow: 1;
   width: 100%;
   height: 100%;
   display: inline-block;
@@ -124,8 +125,10 @@ section {
     border: 2px solid #ffffff80;
     border-left-color: $dark-violet;
     border-radius: 50%;
-    top: -0.5rem;
+    top: 0rem;
     bottom: 0;
+    left: 0;
+    right: 0;
     margin: auto;
     width: 1.2rem;
     height: 1.2rem;

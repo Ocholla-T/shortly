@@ -24,8 +24,7 @@ export default {};
 
 <style lang="scss" scoped>
 .hero {
-  min-height: 90vh;
-
+  overflow: hidden;
   &__heading {
     font-weight: 700;
     color: $very-dark-blue;
