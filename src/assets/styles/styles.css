@@ -12,8 +12,9 @@ html {
           box-sizing: inherit;
   margin: 0;
   padding: 0;
-  line-height: 1.4;
+  line-height: 1.5;
   font-family: "Poppins", sans-serif;
+  font-size: 1.125rem;
 }
 
 a,
@@ -93,6 +94,28 @@ a:hover {
   }
   100% {
     opacity: 0;
+  }
+}
+
+@-webkit-keyframes loading {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes loading {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 /*# sourceMappingURL=styles.css.map */

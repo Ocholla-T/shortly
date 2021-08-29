@@ -56,7 +56,7 @@ export default {
 
     &__heading {
       margin-top: 1.5rem;
-      font-size: 2.25rem;
+      font-size: 2.5rem;
       line-height: 1.1;
     }
 
@@ -67,9 +67,10 @@ export default {
 
     &__button {
       color: white;
-      padding: 0.625rem 1.375rem;
+      padding: 1rem 2rem;
       background-color: $cyan;
-      border-radius: 1.5625rem;
+      border-radius: 2rem;
+      font-size: 1.125rem;
 
       &:hover {
         opacity: 0.75;
