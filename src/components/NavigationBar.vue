@@ -39,6 +39,7 @@
 
 <script>
 export default {
+  name: 'NavigationBar',
   data() {
     return {
       isOpen: false,

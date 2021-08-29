@@ -51,6 +51,7 @@
 import ServicesCard from '@/components/slot/ServicesCard';
 
 export default {
+  name: 'Services',
   components: {
     ServicesCard,
   },

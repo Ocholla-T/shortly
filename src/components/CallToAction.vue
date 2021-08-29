@@ -29,22 +29,23 @@
         </form>
       </div>
       <div v-if="hasLink">
-        <ShortenedLinkCard v-for="(url, index) in allUrls" :key="index">
+        <CallToActionCopyLink v-for="(url, index) in allUrls" :key="index">
           <template v-slot:original-link> {{ url.originalLink }}</template>
           <template v-slot:shortened-link>{{ url.shortenedLink }} </template>
-        </ShortenedLinkCard>
+        </CallToActionCopyLink>
       </div>
     </div>
   </section>
 </template>
 
 <script>
-import ShortenedLinkCard from '@/components/slot/ShortenedLinkCard';
+import CallToActionCopyLink from '@/components/slot/CallToActionCopyLink';
 import { mapState, mapGetters, mapActions } from 'vuex';
 
 export default {
+  name: 'CallToAction',
   components: {
-    ShortenedLinkCard,
+    CallToActionCopyLink,
   },
   data() {
     return {};
