@@ -80,7 +80,7 @@ export default {
     }
     > h2 {
       color: $very-dark-violet;
-      font-size: 1.625rem;
+      font-size: 2rem;
       margin-bottom: 1rem;
     }
 

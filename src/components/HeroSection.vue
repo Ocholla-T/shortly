@@ -106,7 +106,6 @@ export default {
 
     &__paragraph {
       margin: 0.75rem 0 2rem 0;
-      font-size: 1.25rem;
     }
   }
 }
