@@ -63,7 +63,6 @@ export default {
     > p {
       margin: 0.5rem 0;
       color: $very-dark-violet;
-      font-size: 0.875rem;
 
       &:last-of-type {
         color: $cyan;
