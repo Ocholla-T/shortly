@@ -5,6 +5,11 @@
       src="@/assets/images/bg-boost-mobile.svg"
       alt="background image"
     />
+    <img
+      class="footerCTA__image hide-for-mobile"
+      src="@/assets/images/bg-boost-desktop.svg"
+      alt="background image"
+    />
 
     <div class="footerCTA__text">
       <h1>
@@ -30,6 +35,10 @@ export default {
   background-color: $dark-violet;
   min-height: 20rem;
 
+  @include breakpoint-up(large) {
+    min-height: 15rem;
+  }
+
   &__image {
     position: absolute;
     width: 100%;
@@ -48,7 +57,7 @@ export default {
     }
 
     > button {
-      padding: 1rem 2rem;
+      padding: 0.825rem 2rem;
       background-color: #2acfcf;
       border-radius: 2rem;
       border: 0;
