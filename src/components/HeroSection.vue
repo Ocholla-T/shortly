@@ -36,6 +36,18 @@ export default {
     color: $grayish-violet;
   }
 
+  &__button {
+    color: white;
+    padding: 0.825rem 2rem;
+    background-color: $cyan;
+    border-radius: 2rem;
+    font-size: 1rem;
+
+    &:hover {
+      opacity: 0.75;
+    }
+  }
+
   @include breakpoint-down(medium) {
     margin-left: 1rem;
     text-align: center;
@@ -63,18 +75,6 @@ export default {
     &__paragraph {
       margin-top: 1rem;
       margin-bottom: 2rem;
-    }
-
-    &__button {
-      color: white;
-      padding: 1rem 2rem;
-      background-color: $cyan;
-      border-radius: 2rem;
-      font-size: 1.125rem;
-
-      &:hover {
-        opacity: 0.75;
-      }
     }
   }
   @include breakpoint-up(large) {
@@ -107,18 +107,6 @@ export default {
     &__paragraph {
       margin: 0.75rem 0 2rem 0;
       font-size: 1.25rem;
-    }
-
-    &__button {
-      color: white;
-      padding: 0.625rem 1.375rem;
-      background-color: $cyan;
-      border-radius: 1.5625rem;
-      font-size: 1rem;
-
-      &:hover {
-        opacity: 0.75;
-      }
     }
   }
 }
