@@ -63,6 +63,10 @@ export default {
       border: 0;
       color: white;
       font-weight: 700;
+
+      &:hover {
+        opacity: 0.75;
+      }
     }
   }
 }
