@@ -20,11 +20,7 @@ const actions = {
     }
 
     state.isLoading = true;
-    const response = await axios
-      .get(`https://api.shrtco.de/v2/shorten?url=${state.urlModel}`)
-      .catch((error) => {
-        console.error(error);
-      });
+    const response = await axios.get(`https://api.shrtco.de/v2/shorten?url=${state.urlModel}`);
 
     state.isLoading = false;
 
