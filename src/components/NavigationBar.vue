@@ -13,14 +13,14 @@
       </a>
 
       <!-- desktop-menu -->
-      <div class="hide-for-mobile header__links ">
+      <div class="header__links hide-for-mobile  ">
         <a href="#">Features</a>
         <a href="#">Pricing</a>
         <a href="#">Resources</a>
       </div>
-      <div class=" hide-for-mobile header__cta ">
+      <div class="header__cta hide-for-mobile">
         <a href="#">Login</a>
-        <a href="#" class="sign-up-button">Sign Up</a>
+        <button class="button">Sign Up</button>
       </div>
     </nav>
 
@@ -55,12 +55,11 @@ export default {
 
 <style lang="scss" scoped>
 .header {
-  margin: 1.25rem 7.125rem;
-  padding: 1rem;
+  padding: 2.25rem 8.125rem;
   position: relative;
 
   @include breakpoint-down(medium) {
-    margin: 0;
+    padding: 1rem;
   }
 
   &__links {
@@ -93,26 +92,16 @@ export default {
       color: $grayish-violet;
       transition: color 300ms ease-in-out;
       transition: opacity 300ms ease-in-out;
-
-      // signup button
-      &:last-of-type {
-        color: white;
-        padding: 0.625rem 1.375rem;
-        background-color: $cyan;
-        border-radius: 1.5625rem;
-
-        &:hover {
-          opacity: 0.75;
-        }
+      margin-right: 1.75rem;
+      &:hover {
+        color: $very-dark-blue;
       }
+    }
 
-      &:not(:last-child) {
-        margin-right: 1.75rem;
-
-        &:hover {
-          color: $very-dark-blue;
-        }
-      }
+    > button {
+      padding: 0.625rem 1.375rem;
+      border-radius: 1.5625rem;
+      font-size: 0.865rem;
     }
   }
 

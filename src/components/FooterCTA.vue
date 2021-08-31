@@ -15,7 +15,7 @@
       <h1>
         Boost your links today
       </h1>
-      <button>Get Started</button>
+      <button class="button">Get Started</button>
     </div>
   </section>
 </template>
@@ -54,19 +54,6 @@ export default {
       font-size: 2rem;
       margin-bottom: 1.5rem;
       color: white;
-    }
-
-    > button {
-      padding: 0.825rem 2rem;
-      background-color: #2acfcf;
-      border-radius: 2rem;
-      border: 0;
-      color: white;
-      font-weight: 700;
-
-      &:hover {
-        opacity: 0.75;
-      }
     }
   }
 }

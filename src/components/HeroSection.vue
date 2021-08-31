@@ -13,7 +13,7 @@
         Build your brand's recognition and get detailed insights on how your links are performing
       </p>
 
-      <a href="#" class="hero__button">Get Started</a>
+      <button class="button">Get Started</button>
     </div>
   </section>
 </template>
@@ -34,18 +34,6 @@ export default {
 
   &__paragraph {
     color: $grayish-violet;
-  }
-
-  &__button {
-    color: white;
-    padding: 0.825rem 2rem;
-    background-color: $cyan;
-    border-radius: 2rem;
-    font-size: 1rem;
-
-    &:hover {
-      opacity: 0.75;
-    }
   }
 
   @include breakpoint-down(medium) {

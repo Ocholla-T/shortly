@@ -7,22 +7,22 @@
     <div class="container">
       <div class="footer__text">
         <h2>Features</h2>
-        <p>Link Shortening</p>
-        <p>Branded Links</p>
-        <p>Analytics</p>
+        <a>Link Shortening</a>
+        <a>Branded Links</a>
+        <a>Analytics</a>
       </div>
       <div class="footer__text">
         <h2>Resources</h2>
-        <p>Blog</p>
-        <p>Developers</p>
-        <p>Support</p>
+        <a>Blog</a>
+        <a>Developers</a>
+        <a>Support</a>
       </div>
       <div class="footer__text">
         <h2>Company</h2>
-        <p>About</p>
-        <p>Our Team</p>
-        <p>Careers</p>
-        <p>Contact</p>
+        <a>About</a>
+        <a>Our Team</a>
+        <a>Careers</a>
+        <a>Contact</a>
       </div>
       <div class="footer__social flex flex-jc-c">
         <img src="@/assets/images/icon-facebook.svg" alt="" />
@@ -56,6 +56,7 @@ export default {
     align-items: flex-start;
     .container {
       display: flex;
+      flex: 0 2 25rem;
       gap: 15%;
       align-items: flex-start;
     }
@@ -75,10 +76,12 @@ export default {
       margin-bottom: 1.5rem;
     }
 
-    > p {
+    > a {
       font-size: 1rem;
+      display: block;
       color: $gray;
       margin-bottom: 0.75rem;
+      cursor: pointer;
     }
   }
 

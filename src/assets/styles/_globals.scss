@@ -54,3 +54,17 @@ a:hover {
     display: none;
   }
 }
+
+.button {
+  padding: 0.825rem 2rem;
+  background-color: #2acfcf;
+  border-radius: 2rem;
+  border: 0;
+  color: white;
+  cursor: pointer;
+  font-weight: 700;
+
+  &:hover {
+    opacity: 0.75;
+  }
+}
