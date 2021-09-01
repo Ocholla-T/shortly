@@ -92,6 +92,7 @@ export default {
 
   &__text,
   &__social {
+    cursor: pointer;
     @include breakpoint-up(large) {
       margin: 0;
       text-align: left;
