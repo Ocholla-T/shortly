@@ -1,14 +1,12 @@
 <template>
-  <section>
-    <NavigationBar />
-    <main role="main">
-      <HeroSection />
-      <CallToAction />
-      <Services />
-      <FooterCTA />
-    </main>
-    <Footer />
-  </section>
+  <NavigationBar />
+  <main role="main">
+    <HeroSection />
+    <CallToAction />
+    <Services />
+    <FooterCTA />
+  </main>
+  <Footer />
 </template>
 
 <script>

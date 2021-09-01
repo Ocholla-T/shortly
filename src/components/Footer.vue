@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer flex flex-ai-c " role="contentinfo">
+  <footer class="footer flex flex-ai-c">
     <div>
       <img class="footer__logo" src="@/assets/images/logo.svg" alt="brand icon" />
     </div>

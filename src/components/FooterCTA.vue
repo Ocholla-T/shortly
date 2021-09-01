@@ -12,9 +12,9 @@
     />
 
     <div class="footerCTA__text">
-      <h1>
+      <h2>
         Boost your links today
-      </h1>
+      </h2>
       <button class="button">Get Started</button>
     </div>
   </section>
@@ -50,7 +50,7 @@ export default {
     text-align: center;
 
     z-index: 1;
-    > h1 {
+    > h2 {
       font-size: 2rem;
       margin-bottom: 1.5rem;
       color: white;
