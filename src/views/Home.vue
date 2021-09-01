@@ -1,6 +1,6 @@
 <template>
   <NavigationBar />
-  <main role="main">
+  <main>
     <HeroSection />
     <CallToAction />
     <Services />

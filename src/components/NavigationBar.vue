@@ -1,6 +1,6 @@
 <template>
-  <header role="banner">
-    <nav class="header flex flex-jc-sb flex-ai-c" role="navigation">
+  <header>
+    <nav class="header flex flex-jc-sb flex-ai-c">
       <a href="#" class="logo">
         <img src="../assets/images/logo.svg" alt="shortly" />
       </a>
