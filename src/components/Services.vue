@@ -75,6 +75,10 @@ export default {
     text-align: center;
     margin-bottom: 5rem;
 
+    > p {
+      font-weight: 400;
+    }
+
     @include breakpoint-up(large) {
       padding: 3rem 14rem;
     }

@@ -78,6 +78,7 @@ export default {
 
     > a {
       font-size: 1rem;
+      font-weight: 400;
       display: block;
       color: $gray;
       margin-bottom: 0.75rem;

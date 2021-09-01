@@ -34,6 +34,7 @@ export default {
 
   &__paragraph {
     color: $grayish-violet;
+    font-weight: 400;
   }
 
   @include breakpoint-down(medium) {

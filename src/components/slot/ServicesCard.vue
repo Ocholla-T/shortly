@@ -72,6 +72,7 @@ export default {
 
   > p {
     color: $grayish-violet;
+    font-weight: 400;
 
     @include breakpoint-up(large) {
       font-size: 1rem;
