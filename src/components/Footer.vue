@@ -1,5 +1,5 @@
 <template>
-  <section class="footer flex flex-ai-c ">
+  <footer class="footer flex flex-ai-c " role="contentinfo">
     <div>
       <img class="footer__logo" src="@/assets/images/logo.svg" alt="brand icon" />
     </div>
@@ -31,7 +31,7 @@
         <img src="@/assets/images/icon-instagram.svg" alt="" />
       </div>
     </div>
-  </section>
+  </footer>
 </template>
 
 <script>

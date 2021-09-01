@@ -1,8 +1,8 @@
 <template>
-  <header>
-    <nav class="header flex flex-jc-sb flex-ai-c">
+  <header role="banner">
+    <nav class="header flex flex-jc-sb flex-ai-c" role="navigation">
       <a href="#" class="logo">
-        <img src="../assets/images/logo.svg" alt="shortly" s />
+        <img src="../assets/images/logo.svg" alt="shortly" />
       </a>
 
       <!-- mobile menu -->
@@ -66,7 +66,7 @@ export default {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     position: absolute;
-    left: 11rem;
+    left: 19rem;
 
     > a {
       color: $grayish-violet;
